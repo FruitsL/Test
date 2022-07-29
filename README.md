@@ -1,17 +1,14 @@
 ## 1. 협업도구 결정
 1) 조장 : 정문경
 2) 조원 : 김예림, 박유진, 윤지혜, 이은성
-3) 트렐로
-4) git
-## 2. Github 연동 & 연습
-1) git Desktop
-## 3. 사용기술
+3) 협업 도구 : Trello, GitHub Desktop
+## 2. 사용기술
 1) Java, JavaScript
 2) SpringBoot -> VS Code
 3) MyBatis
 4) Bootstrap
-## 4. 프로젝트 방향성
-## 5. 담당자
+## 3. 프로젝트 방향성
+## 4. 담당자
 1) readme : 김예림
 2) DB : 
 3) 문서 : 
