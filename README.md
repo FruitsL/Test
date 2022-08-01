@@ -3,7 +3,7 @@
 2) 조원 : 김예림, 박유진, 윤지혜, 이은성
 3) 협업 도구 : Trello, GitHub Desktop, Visual Studio Code
 ## 2. 사용기술
-1) Java, JavaScript
+1) Java 11, JavaScript
 2) SpringBoot
 3) MyBatis
 4) Bootstrap
