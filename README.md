@@ -15,4 +15,4 @@
 4) 디자인 : 윤지혜
 5) Trello 관리 : 정문경
 ## 5. 링크
-TODO : https://drive.google.com/drive/folders/1fm-bRLzvLfQ4eqJLFY6GXMeRUv1PnncL
+공유 폴더 : https://drive.google.com/drive/folders/1fm-bRLzvLfQ4eqJLFY6GXMeRUv1PnncL
