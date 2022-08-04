@@ -1,7 +1,6 @@
 ## 1. 협업도구 결정
-1) 조장 : 정문경
-2) 조원 : 김예림, 박유진, 윤지혜, 이은성
-3) 협업 도구 : Trello, GitHub Desktop, Visual Studio Code
+1) 팀 구성 : 정문경, 김예림, 박유진, 윤지혜, 이은성
+2) 협업 도구 : Trello, GitHub Desktop, Visual Studio Code
 ## 2. 사용기술
 1) Java 11, JavaScript
 2) SpringBoot
