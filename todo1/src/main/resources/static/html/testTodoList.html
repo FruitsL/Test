@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Todo List Page</h1>
+
+    <div class="todoListDiv">
+        <ul class="targetUL">
+
+        </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <div class="pageDiv">
+
+    </div>
+
+    <style>
+        .pageDiv{
+            display: flex;
+            margin: 2em;
+            border: 1px solid green;
+            background-color: gray;
+            color: white;
+        }
+
+        .pageDiv div{
+            padding: 0.3em;
+            margin: 20px;
+        }
+    </style>
+
+    <script>
+
+        const getList = async(pageNum) =>{
+            const res = await axios.get("http://localhost:8080/todo/list", {params:{page:pageNum}})
+
+            return res
+        }
+
+
+        const targetUL = document.querySelector(".targetUL")
+        const pageDiv = document.querySelector(".pageDiv")
+
+        const printList = (pageNum) => {
+
+            const printPages = ({prev, next, start, end}) => {
+                console.log(prev, next, start, end)
+                let str = ""
+
+                if(prev){
+                    str += `<div data-page=${start - 1}>이전</div>`
+                }
+                
+                for(let i = start; i <= end; i++){
+                    str += `<div data-page=${i}>${i}</div>`
+                }
+                if(next){
+                    str += `<div data-page=${end + 1}>다음</div>`
+                }
+                pageDiv.innerHTML = str
+            }
+            
+            
+
+            getList(pageNum).then(result =>{
+                
+                const data = result.data
+                const dtoList = data.dtoList
+                
+                let str = ""
+                
+                for(const dto of dtoList) {
+                    const {tno, title, dueDate, complete} = dto
+                    const {uuid, fileName, img} = dto
+                    
+
+                    str += `<li>${tno} --- ${title} `
+                    if(uuid){
+                        str += `<a href>${uuid}_${fileName}</a>`
+                    }
+                    str += `</li>`
+
+                } //end for
+                console.log(str)
+
+                targetUL.innerHTML = str
+                //목록 출력 끝
+
+                //페이지 출력
+                printPages(data)
+                
+            })
+        }
+
+        document.querySelector(".pageDiv").addEventListener("click", (e) =>{
+            const target = e.target
+
+            const pageNum = target.getAttribute("data-page")
+
+            if(!pageNum){
+                return
+            }
+            alert(pageNum)
+            
+            printList(pageNum)
+        }, false)
+
+        printList(1)
+
+    </script>
+</body>
+</html>
