@@ -31,3 +31,8 @@
 공유 폴더 : https://drive.google.com/drive/folders/1fm-bRLzvLfQ4eqJLFY6GXMeRUv1PnncL
 
 github : https://github.com/ckck24
+
+## 6. 기획 문저 구성
+프로젝트 주제, 인원 구성, 기간
+1) 기획의도 (비전 -> 약 50자 문장) : AS-IS와 To-Be 모델로 비교, SWOT 분석
+2) 주요 기능 (3가지)
